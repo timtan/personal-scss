@@ -1,4 +1,4 @@
-$OffCanvasLeftSize: 260px ;
+$OffCanvasLeftSize: 260px !default;
 
 .OffCanvas{
   overflow-x: hidden;
@@ -6,7 +6,7 @@ $OffCanvasLeftSize: 260px ;
   position: relative;
 }
 
-.OffCanvas-content{
+.OffCanvas-front {
   z-index: 1;
   position: absolute;
   top:0;
@@ -18,8 +18,16 @@ $OffCanvasLeftSize: 260px ;
   -webkit-overflow-scrolling: touch;
 }
 
+.OffCanvas-back{
+  width: $OffCanvasLeftSize;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .OffCanvas--close{
-  .OffCanvas-content{
+  .Offcanvas-front {
     left: 0;
   }
 }
@@ -35,7 +43,7 @@ $OffCanvasLeftSize: 260px ;
 }
 
 .OffCanvas--open{
-  .OffCanvas-content{
+  .OffCanvas-front {
     left: $OffCanvasLeftSize;
   }
   .BottomRegion{
@@ -43,11 +51,4 @@ $OffCanvasLeftSize: 260px ;
   }
 }
 
-.OffCanvas-menu{
-  width: $OffCanvasLeftSize;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
