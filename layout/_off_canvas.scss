@@ -2,13 +2,14 @@ $OffCanvasLeftSize: 260px !default;
 
 .OffCanvas{
   overflow-x: hidden;
+  overflow-y: auto;
   height: 100vh;
   position: relative;
 }
 
 .OffCanvas-front {
-  z-index: 1;
   position: absolute;
+  z-index: 1;
   top:0;
   left:0;
   width: 100%;
@@ -16,14 +17,20 @@ $OffCanvasLeftSize: 260px !default;
   transition: left 0.4s;
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
+  height: 100vh;
 }
 
 .OffCanvas-back{
+  position: absolute;
+  height: 100vh;
   width: $OffCanvasLeftSize;
   z-index: 0;
-  position: absolute;
+  overflow-y: auto;
+  /*
   top: 0;
   left: 0;
+  bottom: 0;
+  */
 }
 
 .OffCanvas--close{
