@@ -18,6 +18,9 @@ $OffCanvasLeftSize: 260px !default;
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
   height: 100vh;
+  .OffCanvas--open &{
+    left: $OffCanvasLeftSize;
+  }
 }
 
 .OffCanvas-back{
@@ -47,15 +50,24 @@ $OffCanvasLeftSize: 260px !default;
   right: 0;
   height: 0;
   transition: all 0.4s;
-}
-
-.OffCanvas--open{
-  .OffCanvas-front {
-    left: $OffCanvasLeftSize;
-  }
-  .BottomRegion{
+  .OffCanvas--open &{
     left: $OffCanvasLeftSize;
   }
 }
 
+.OffCanvas-bottom{
+  @extend .BottomRegion;
+}
 
+
+.OffCanvas-top{
+  position: fixed;
+  right:0;
+  top:0;
+  height: 50px;
+  left:0;
+  transition: all 0.4s;
+  .OffCanvas--open &{
+    left: $OffCanvasLeftSize;
+  }
+}
