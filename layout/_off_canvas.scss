@@ -70,4 +70,5 @@ html, body{
   .OffCanvas--open &{
     left: $OffCanvasLeftSize;
   }
+  z-index: 10;
 }
