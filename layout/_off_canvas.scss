@@ -11,6 +11,8 @@ html, body{
   position: relative;
 }
 
+
+
 .OffCanvas-front {
   position: absolute;
   z-index: 1;
@@ -35,11 +37,6 @@ html, body{
   overflow-y: auto;
 }
 
-.OffCanvas--close{
-  .Offcanvas-front {
-    left: 0;
-  }
-}
 
 .BottomRegion{
   position: fixed;
@@ -70,5 +67,9 @@ html, body{
   .OffCanvas--open &{
     left: $OffCanvasLeftSize;
   }
-  z-index: 10;
+  z-index: 2;
+}
+
+.OffCanvas-middle{
+  margin-top:50px;
 }
